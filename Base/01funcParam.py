@@ -24,6 +24,7 @@ p=[1,1]
 print(sum(5,5,*p))
 
 
+# 关键字参数，再指定参数值时，同时可以指定参数名称
 def person(name,age,**other):
     print('name',name,'age',age,'other',other)
 
@@ -34,7 +35,7 @@ person('恶魔',20,city="地狱",shuxing="火")
 t={'city':'地狱','kg':50}
 person('恶魔',20,**t)
 
-
+# 限定关键字参数，参数名
 # 限定命名参数只能是city,kg，使用特殊分隔符 *区分
 def person2(name,age,*, city,kg):
     print('name',name,'age',age,'city',city,'kg',kg)
@@ -53,6 +54,7 @@ def person3(name, age, *args, city, job):
 
 person3('杰克',4,*t,city="天下",job="医生")
 
+# 函数的递归调用
 def move(n,a,b,c):
     if n == 1:
          print(a, '-->', c)
@@ -61,6 +63,6 @@ def move(n,a,b,c):
         move(1,a,b,c)   #把a上1个盘子移动到c
         move(n-1,b,a,c) #把b上的n-1个盘子借助a移动到c
 
-move(2,'a','b','c')
+move(3,'a','b','c')
 
 

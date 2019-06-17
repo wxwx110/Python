@@ -79,6 +79,8 @@ from functools import reduce
     
 #     return x[0].upper() +x[1:].lower()
 
+
+
 # # 输入名字，让首字母大写cl
 # def changeName(nameInput):
 #     return map(change,nameList )
