@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 '''
-@File    :   12oopProperty.py
-@Time    :   2019/06/18 16:37:45
+@File    :   14oopProperty2.py
+@Time    :   2019/06/20 15:32:24
 @Author  :   王翔 
 @Version :   1.0
 @Contact :   muumuu123@126.com
@@ -11,26 +11,8 @@
 '''
 
 # here put the import lib
-
+# property 讲函数的方法封装成属性调用
 class Student(object):
-    #定义类属性
-    name = 'TTT'
-
-s=Student()
-#再没有定义实例属性的情况下回去寻找类属性
-print(s.name)
-print(Student.name)
-# 增加类属性
-s.name="tom"
-print(s.name)
-print(Student.name)
-
-#删除实例属性
-del s.name 
-print(s.name)
-print(Student.name)
-
-class Student2(object):
 
     @property
     def score(self):
@@ -43,4 +25,28 @@ class Student2(object):
         if value < 0 or value > 100:
             raise ValueError('score must between 0 ~ 100!')
         self._score = value
+    
+    @property
+    def birth(self):
+        return self._birth
+
+    @birth.setter
+    def birth(self, value):
+        self._birth = value
+
+    #只读属性
+    @property
+    def age(self):
+        return 2015 - self._birth
+
+a=Student()
+# 如果没有@property需要这样调用
+#a.score(89)
+a.score=89
+a.birth=1981
+print (a.score)
+print (a.age)
+
+
+
 
