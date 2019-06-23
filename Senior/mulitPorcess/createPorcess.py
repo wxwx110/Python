@@ -12,8 +12,7 @@
 
 # here put the import lib
 from multiprocessing import Process
-from multiprocessing import Pool
-import os,time,random
+
 
 #Unix/Linux操作系统提供了一个fork()系统调用，它非常特殊。普通的函数调用，调用一次，返回一次，
 # 但是fork()调用一次，返回两次，因为操作系统自动把当前进程（称为父进程）复制了一份（称为子进程）

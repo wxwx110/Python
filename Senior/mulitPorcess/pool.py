@@ -9,7 +9,8 @@
 @License :   (C)Copyright 2018-2019, 风蓝科技
 @Desc    :   None
 '''
-
+from multiprocessing import Pool
+import os,time,random
 # here put the import lib
 #Process pool
 def long_time_task(name):
