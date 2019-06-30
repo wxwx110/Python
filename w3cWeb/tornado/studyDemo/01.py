@@ -21,6 +21,7 @@ class IndexHandler(tornado.web.RequestHandler):
         self.write('helloWorld')
 
 if __name__=='__main__':
+    # 注意路由前面的/ 不能省略
     app=tornado.web.Application([(r"/",IndexHandler)])
     app.listen(9000)
     tornado.ioloop.IOLoop.current().start()
