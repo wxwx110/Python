@@ -13,7 +13,7 @@
     <!-- <link href="/static/css/index.css" rel="stylesheet"> -->
     <!-- static_url函数创建了一个基于文件内容的hash值，并将其添加到URL末尾查询字符串的参数v
         确保浏览器总是加载一个文件的最新版 -->
-    <link href='{% static_url("css/index.css") %}' rel="stylesheet">
+    <link href='{{ static_url("css/index.css") }}' rel="stylesheet">
 </head>
 
 <body>

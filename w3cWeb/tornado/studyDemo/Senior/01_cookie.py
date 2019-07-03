@@ -20,9 +20,13 @@ class IndexHandler(tornado.web.RequestHandler):
     def get(self):
         #写cookie
         # 原理 设置cookie实际就是通过设置header的Set-Cookie来实现的。
+        #self.set_header("set-cookie","key=value: path=/")
         self.set_cookie("n1", "v1")
-        self.set_cookie("n2", "v2", path="/new", expires=time.strptime("2016-11-11 23:59:59","%Y-%m-%d %H:%M:%S"))
+       
         self.set_cookie("n3", "v3", expires_days=20)
+
+        #set_cookie默认是用UTC时间，如果要转换成本地时间需要使用mktime()进行转换
+        self.set_cookie("n2", "v2", path="/new", expires=time.strptime("2016-11-11 23:59:59","%Y-%m-%d %H:%M:%S"))
         # 利用time.mktime将本地时间转换为UTC标准时间
         self.set_cookie("n4", "v4", expires=time.mktime(time.strptime("2016-11-11 23:59:59","%Y-%m-%d %H:%M:%S")))
         
