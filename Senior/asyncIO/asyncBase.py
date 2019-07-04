@@ -11,6 +11,7 @@
 '''
 
 # here put the import lib
+import threading,os
 def customer():
     r=''
     while True:
@@ -27,11 +28,13 @@ def produce(c):
     
     k=c.send(None)
     n=0
-    while n<5:
+    while n<2:
         n=n+1
         print('[PRODUCER] Producing %s...' % n)
+        print('before:',threading.current_thread().name,os.getpid())
         r = c.send(n)
         print('[PRODUCER] Consumer return: %s' % r)
+        print('after',threading.current_thread().name,os.getpid())
     c.close()
 
 '''
