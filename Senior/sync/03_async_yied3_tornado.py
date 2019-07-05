@@ -11,7 +11,7 @@
 '''
 
 # here put the import lib
-
+#tornado的基本工作原理
 import time
 import threading
 
@@ -46,9 +46,11 @@ def gen_couroutine(f):
         # tournado的异步是用epoll交互替代了thread部分
         #开始执行线程，调用fun(函数)
         print(3,'调用多线程')
+        # tornado使用的异步是linux的epoll，是在一个线程中完成的，并不是多线程
         threading.Thread(target=fun,name="myfun").start()
     return wrapper
     
+# 相当于各种handler
 @gen_couroutine
 def req_a():
     print(2,'开始执req_a()构造器，通过yeid 返回 long_io构造器')
@@ -57,7 +59,8 @@ def req_a():
     print (8,'打印long_io()的执行结果')
     print(ret)
     print ('完成处理请求a')
-
+    
+# 相当于各种handler
 def req_b():
     print ('异步IO开始处理请求b')
     time.sleep(2)
