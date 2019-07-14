@@ -1,0 +1,22 @@
+[D 190707 15:05:44 selector_events:53] Using selector: SelectSelector
+[D 190707 15:05:44 selector_events:53] Using selector: SelectSelector
+[D 190707 15:05:47 Passport:6] debug
+[I 190707 15:05:47 Passport:7] info
+[W 190707 15:05:47 Passport:8] warning
+[E 190707 15:05:47 Passport:9] error
+[I 190707 15:05:47 web:2246] 304 GET / (::1) 0.52ms
+[I 190707 15:06:35 autoreload:202] d:\StudyCore\python\w3cWeb\tornado\project\project01\config.py modified; restarting server
+[D 190707 15:06:35 selector_events:53] Using selector: SelectSelector
+[D 190707 15:06:35 selector_events:53] Using selector: SelectSelector
+[I 190707 15:06:37 autoreload:202] d:\StudyCore\python\w3cWeb\tornado\project\project01\config.py modified; restarting server
+[D 190707 15:06:37 selector_events:53] Using selector: SelectSelector
+[D 190707 15:06:37 selector_events:53] Using selector: SelectSelector
+[I 190707 15:06:45 autoreload:202] d:\StudyCore\python\w3cWeb\tornado\project\project01\config.py modified; restarting server
+[D 190707 15:06:45 selector_events:53] Using selector: SelectSelector
+[D 190707 15:06:45 selector_events:53] Using selector: SelectSelector
+[I 190707 15:06:48 autoreload:202] d:\StudyCore\python\w3cWeb\tornado\project\project01\config.py modified; restarting server
+[D 190707 15:06:48 selector_events:53] Using selector: SelectSelector
+[D 190707 15:06:48 selector_events:53] Using selector: SelectSelector
+[I 190707 15:07:23 autoreload:202] d:\StudyCore\python\w3cWeb\tornado\project\project01\config.py modified; restarting server
+[D 190707 15:07:23 selector_events:53] Using selector: SelectSelector
+[D 190707 15:07:23 selector_events:53] Using selector: SelectSelector

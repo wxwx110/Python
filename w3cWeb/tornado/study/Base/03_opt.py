@@ -48,7 +48,8 @@ if __name__ == "__main__":
     options.logging = None
     tornado.options.parse_command_line()
     '''
-    # tornado.options.parse_command_line() 命令行输入 --help 运行参数时，会显示定义的options定义的help信息
+    # tornado.options.parse_command_line() 命令行输入 --help 运行参数时，
+    # 会显示定义的options定义的help信息,同时能够接收命令行参数作为程序的启动配置
     tornado.options.parse_command_line()
     print(tornado.options.options)
     print (tornado.options.options.itcast)
