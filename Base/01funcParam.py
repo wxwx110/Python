@@ -17,6 +17,8 @@ def sum(a=0,b=0,*c):
     sum=0
     for x in c:
         sum+=x
+    else :
+        print('endofor')
     return sum+a+b
 
 p=[1,1]
