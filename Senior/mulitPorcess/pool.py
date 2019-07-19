@@ -6,7 +6,7 @@
 @Author  :   王翔 
 @Version :   1.0
 @Contact :   muumuu123@126.com
-@License :   (C)Copyright 2018-2019, 风蓝科技
+@License :   (C)Copyright 2018-2019, 
 @Desc    :   None
 '''
 from multiprocessing import Pool
