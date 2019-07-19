@@ -18,6 +18,8 @@ f=open(filepath,'r')
 
 print(f.read())
 f.close()
+# readlines() 一次读取全部分行显示
+# readline() 每次读取一行
 
 
 try:
@@ -40,6 +42,21 @@ with open(filepath,'r') as f:
     for x in f.read(5):
         a=a+1
         print(str(a)+x+'|')
+
+
+#读写文件的过程中，如果想知道当前的位置，可以使用tell()来获取      
+# 如果在读写文件的过程中，需要从另外一个位置进行操作的话，可以使用seek()
+#seek(offset, from)有2个参数
+#offset:偏移量
+# from:方向
+# 0:表示文件开头
+# 1:表示当前位置
+# 2:表示文件末尾
+with open(filepath,'r') as f:
+    print( f.read(1),f.tell(),f.read(1),f.tell(),f.read(1),f.tell())
+    #使用seek重新定位到文件开头
+    f.seek(0,0)    
+    print(f.read(1))
 
 # 包含中文时，要加上第三个参数encoding='utf-8'
 with open(filepath,'r',encoding='utf-8') as f:
