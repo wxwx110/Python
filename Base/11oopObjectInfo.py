@@ -55,6 +55,7 @@ dog=Dog()
 miniDog=MiniDog()
 
 print(isinstance(dog,Animal))
+print('isinstance(dog,Dog)',isinstance(dog,Dog))
 print(isinstance(miniDog,Animal))
 
 

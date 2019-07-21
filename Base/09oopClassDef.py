@@ -14,10 +14,10 @@
 class Student(object):
 
     def __init__(self,name,age):
+        print('function init')
         self.name=name
         #增加两个下划线后不能在类的外部访问
-        self.__age=age
-
+        self.__age=age   
         
     # 类中方法的第一个参数必须是self
     def getName(self):
