@@ -12,15 +12,18 @@
 
 # here put the import lib
 class Father(object):
-    def __init__(self):
-        print('Father__init__')
-        print('father init: self',self)
-    
+  
     def __new__(cls):
         print ("Father__new__")
         t= object.__new__(cls)
         print('Father__new__ t',t)
         return t
+    # init函数初始化对象
+    def __init__(self):
+        print('Father__init__')
+        print('father init: self',self)
+  
+
 
     def funcFather(self):
         print('funcFather')
@@ -31,9 +34,13 @@ class Son(Father):
         print('Son __init__')
         print('Son init: self',self)
     
+    # new函数 创建了对象 new 函数接收要创建的类
+    # 调用基类的__new__()或者 object的__new__()进行对象的创建
+    #
     def __new__(cls):
         print ("Son __new__")
-        t= object.__new__(cls)
+        t=Father.__new__(cls)
+        # t= object.__new__(cls)
         print('Son __new__ t',t)
         return t
     
