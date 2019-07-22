@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 '''
-@File    :   17metaclass.py
-@Time    :   2019/06/20 21:12:38
+@File    :   17metaclass_apply.py
+@Time    :   2019/07/22 15:26:45
 @Author  :   王翔 
 @Version :   1.0
 @Contact :   muumuu123@126.com
@@ -11,6 +11,7 @@
 '''
 
 # here put the import lib
+
 
 #metaclass允许你创建类或者修改类
 #
@@ -100,5 +101,5 @@ class User(Model):
     password = StringField('password')
 
 
-u = User(id=12345, name='Michael', email='test@orm.org', password='my-pwd')
-u.save()
+# u = User(id=12345, name='Michael', email='test@orm.org', password='my-pwd')
+# u.save()
