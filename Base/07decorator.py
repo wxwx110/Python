@@ -11,6 +11,15 @@
 '''
 
 # here put the import lib
+'''
+装饰器的常用功能
+1引入日志
+2函数执行时间统计
+3执行函数前预备处理
+4执行函数后清理功能
+5权限校验等场景
+6缓存
+'''
 def now():
     print("2015-03-25")
 
@@ -21,9 +30,10 @@ f()
 print(now.__name__)
 
 # 增强now函数功能，但不修改now代码使用装饰器
-# 本质上，decorator就是一个返回函数的高阶函数
-# 装饰器函数在调用装饰函数前进行调用，听过装饰器定义的操作可以定义
-# 被装饰函数的执行
+# 本质上，decorator就是一个返回函数的高阶函数，这个函数包含了对被装饰函数的引用func
+# 其中的执行逻辑由用户自信定义，在不修改func函数原有逻辑的基础上，
+# 加入了装饰器定义的执行逻辑
+
 def log(func):
     def wrapper(*args,**kw):
         print("调用装饰器定义函数")
@@ -52,7 +62,7 @@ print("now2.name:",now2.__name__)
 
 print('---------接收参数的decorator------------')
 #接收参数的decorator
-# 3层嵌套的效果是这样的 now = log('execute')(now)
+# 3层嵌套的效果是这样的 now = log('execute')(now)为了让装饰器能够接收参数
 #首先执行log('execute')，返回的是decorator函数，再调用返回的函数，参数是now函数，返回值最终是wrapper函数
 # 但是此时由于(now)执行后得到的是wrapper函数一次now函数的__name__属性会变成wapper
 #通过  @functools.wraps(func)可以避免这个问题
