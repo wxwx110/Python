@@ -11,6 +11,7 @@
 '''
 
 # here put the import lib
+import os
 from multiprocessing import Process
 
 
@@ -29,7 +30,7 @@ from multiprocessing import Process
 
 #windows Process
 def run_proc(name):
-    print('run Child process %s (%s)...' %(name,os.getpid()))
+    print('run Child process %s (%s)... fatherId : %d' %(name,os.getpid(),os.getppid()))
 
 if __name__=="__main__":
     print('parent process %s' % os.getpid())
@@ -39,6 +40,7 @@ if __name__=="__main__":
     #开始执行子进程
     p.start()
     #等待子进程执行完成后再执行
+    # 主进程会被堵塞 
     p.join()
     print('child process end.')
 

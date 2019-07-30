@@ -14,7 +14,7 @@ import os,time,random
 # here put the import lib
 #Process pool
 def long_time_task(name):
-    print('Ran task %s (%s)...' %(name,os.getpid()))
+    print('Ran task %s (%s)... fatherId:%d' %(name,os.getpid(),os.getppid()))
     start=time.time()
     time.sleep(random.random()*3)
     end=time.time()
@@ -27,6 +27,8 @@ if __name__=='__main__':
     for i in range(6):
         p.apply_async(long_time_task,args=(i,))
     print('Waiting for all subprocesses done...')
+    # 关闭进程池不再接收新的任务
     p.close()
+    # 等待所有进程完成，必须放在close后
     p.join()
     print('Allsubprocesses down.')
