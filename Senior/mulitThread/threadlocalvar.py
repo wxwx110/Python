@@ -11,28 +11,31 @@
 '''
 
 # here put the import lib
-#全局变量local_school就是一个ThreadLocal对象，每
-# 个Thread对它都可以读写student属性，但互不影响。
-# 可以把local_school看成全局变量，
-# 但每个属性如local_school.student都是线程的局部变量，
-# 可以任意读写而互不干扰，也不用管理锁的问题，ThreadLocal内部会处理。
-import threading
+import threading,time
 
-#创建全局thradlocal对象
-local_school=threading.local()
 
-def process_student():
-    std=local_school.student
-    print('hello，%s (in %s)' %(std,threading.current_thread().name))
+# 线程的非全局变量，线程空间是各自独立独有的
 
-def process_thread(name):
-    #绑定Threadlocal的Student
-    local_school.student=name
-    process_student()
 
-t1 = threading.Thread(target= process_thread, args=('Alice',), name='Thread-A')
-t2 = threading.Thread(target= process_thread, args=('Bob',), name='Thread-B')
-t1.start()
-t2.start()
-t1.join()
-t2.join()
+def work1():
+    g_num=100
+    g_num+=1
+    print("g_num after work1:",1,g_num)
+    time.sleep(2)
+    print("g_num after work1:",2,g_num)
+
+def work2():
+    time.sleep(1)
+    g_num=1
+    print("g_num after work2:",1,g_num)
+    
+        
+
+
+if __name__ == "__main__":
+    t1=threading.Thread(target=work1,)
+
+    t2=threading.Thread(target=work2)
+
+    t1.start()
+    t2.start()
