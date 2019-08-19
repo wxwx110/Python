@@ -21,6 +21,8 @@ print(s.recv(1024).decode('utf-8'))
 
 for data in [b'Michael', b'Tracy', b'Sarah']:
     # 发送数据:
+    # TCP发送数据，只需要事先建立连接通道，发送数据时候
+    # 可以不带地址和端口号
     s.send(data)
     print(s.recv(1024).decode('utf-8'))
 s.send(b'exit')

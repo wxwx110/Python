@@ -25,3 +25,4 @@ print(a)
 # 但是并没有修改b元素指向的地址
 b.append(3)
 print(a)
+print(a[2])

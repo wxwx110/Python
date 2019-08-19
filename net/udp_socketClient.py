@@ -14,8 +14,13 @@
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# 指定Udp发送数据时，使用的端口号
+# 一般情况下客户端不需要绑定端口
+s.bind(('',9898))
 for data in [b'Michael', b'Tracy', b'Sarah']:
     # 发送数据:
+    # UDP传输：只保证数据的发送不保证数据的接收
+    # 每次发送数据都需要带上IP地址和端口号，
     s.sendto(data, ('127.0.0.1', 9999))
     # 接收数据:
     print(s.recv(1024).decode('utf-8'))

@@ -17,6 +17,7 @@ import threading,time
 g_num=100
 
 def work1():
+    # 如果再线程中需要修改该值，则先用global申明，否则直接引用即可
     global g_num
     for i in range(3):
         g_num+=1
