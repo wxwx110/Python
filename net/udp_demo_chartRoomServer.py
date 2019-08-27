@@ -17,7 +17,7 @@ import time,socket
 udpchannl=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 udpchannl.bind(('',9997))
 
-addr=('',0)
+addr=('127.0.0.1',9997)
 
 def reciveMessage():
     global addr
@@ -32,19 +32,20 @@ def sendMessage():
     while True:
         sendInfo=input("<<")
         print (addr)
-        # udpchannl.sendto(sendInfo.encode("utf-8"),addr)
+        udpchannl.sendto(sendInfo.encode("utf-8"),addr)
         
 
 if __name__ == "__main__":  
     print("CHART server start %s" %time.time())
     threadrecive=Thread(target=reciveMessage,)
     threadsendMessage=Thread(target=sendMessage)
-    threadrecive.start()
-    threadsendMessage.start()
 
+    threadrecive.start()
+    
+
+
+    threadsendMessage.start()  
     threadrecive.join()
     threadsendMessage.join()
-
-
     print("chart server closeed")
     

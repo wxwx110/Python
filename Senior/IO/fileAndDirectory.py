@@ -30,6 +30,7 @@ print (os.path.abspath('.'))
 # os.path.join('.','aabb')
 #创建目录为保证系统兼容性使用os.path.join进行目录连接会根据操作系统返回对应的路径
 path=os.path.join('.','aabb')
+print(path)
 #os.mkdir(path)
 
 #split与join同理
