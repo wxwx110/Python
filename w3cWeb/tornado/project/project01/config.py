@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 # -*- encoding: utf-8 -*-
 '''
 @File    :   config.py
@@ -19,6 +19,7 @@ settings={
      "static_path":os.path.join(os.path.dirname(__file__),"static")
      ,"template_path":os.path.join(os.path.dirname(__file__),'template')
      ,"debug":True
+    #  base64.b64encode(uuid.uuid4().bytes+uuid.uuid4().bytes)
      ,"cookie_secret":"kFt1p488QMegs5vXh+Zm3ULrUK3rl0b8kKjdbSjvoqc="
      ,"xsrf_cookies":True
      ,"debug":True
