@@ -25,6 +25,7 @@ if __name__ == "__main__":
         [(r'/',IndexHandler)],
         debug=True
     )
+    
 
     # app.listen(9000) 简写了http_server绑定和监听的端口设置   
     # app.listen()这个方法只能在单进程模式中使用。 

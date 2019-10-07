@@ -55,7 +55,7 @@ if __name__ == "__main__":
         [
           (r'/',IndexHandler)
             # ,(r'/c',CookieHandler)
-            ,(r'/(.*)',StaticFileHandler,{"path":os.path.join(current_path, "static/html"),"default_filename":"index.html"})
+           ,(r'/(.*)',StaticFileHandler,{"path":os.path.join(current_path, "static"),"default_filename":"html/index.html"})
         ]
         ,debug=True
         ,cookie_secret = "2hcicVu+TqShDpfsjMWQLZ0Mkq5NPEWSk9fi0zsSt3A="

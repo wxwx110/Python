@@ -35,8 +35,9 @@ class IndexHandler(RequestHandler):
         self.write("param1:%s \n param2:%s \n param3:%s" % (queryParam1,queryParam2,queryParam3))
 
         # POST发送参数的获取，与 queryParam一致 
-        # 对于请求体数据为json或xml的，无法通过这两个方法获取
+        # 对于请求体数据为json或xml的，无法通过上面这两个方法获取
         
+        # 获取body参数，但是不能获取ajax参数
         # get_body_argument(name, default=_ARG_DEFAULT, strip=True)
         # bodyParam1=self.get_body_argument("param1")
         

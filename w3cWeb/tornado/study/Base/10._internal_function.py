@@ -21,11 +21,17 @@ class IndexHandler(tornado.web.RequestHandler):
     #每个请求的处理类Handler在构造一个实例后首先执行initialize()方法
     def initialize(self, database):
        self.database = database
+       print('initialize called')
     
     #预处理，即在执行对应请求方式的HTTP方法（如get、post等）前先执行，
     # 不论以何种HTTP方式请求，都会执行prepare()方法。
     def prepare(self):
-        if self.request.headers.get("Content-Type").startswith("application/json"):
+        reqContentType=self.request.headers.get("Content-Type")
+        if reqContentType is None:
+            reqContentType=''
+        
+        
+        if reqContentType.startswith("application/json"):
             self.json_dict = json.loads(self.request.body)
         else:
             self.json_dict = None
@@ -80,7 +86,7 @@ class IndexHandler(tornado.web.RequestHandler):
 2、initialize()
 3、prepare()
 4、处理HTTP方法
-5、set_default_headers()
+5、set_default_headers() 发生异常后会再次调用设置头信息
 6、write_error()
 7、on_finish()
 '''

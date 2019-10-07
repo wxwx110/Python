@@ -24,10 +24,11 @@ tornado.options.define('port',type=int,default=9000,help='WebServerPort')
 class IndexHandler(RequestHandler):
 
     def get(self):
-        # 通过Request_url()获取命名url
+        # reverse_url()获取命名url
         self.write('<a href="'+self.reverse_url('cpp_url')+'">cpplink</a>')
 
 class SubjectHandler(RequestHandler):
+    # 接收路由中定义的字典{"subject":"python"}，对handler进行初始化
     def initialize(self,subject):
         self.subject=subject
        
@@ -42,7 +43,7 @@ if __name__ == "__main__":
             #路由中的字典，会传入到对应的RequestHandler的initialize()方法中
             (r"/",IndexHandler),
             (r"/python",SubjectHandler,{"subject":"python"}),
-            # 使用name别民时不能使用tuple需要使用tornado.web.url()函数
+            # 使用name别名，时不能使用tuple需要使用tornado.web.url()函数
             #可以调用RequestHandler.reverse_url(name)获取url
             url(r"/cpp",SubjectHandler,{"subject":"cpp"},name="cpp_url")
         ],
