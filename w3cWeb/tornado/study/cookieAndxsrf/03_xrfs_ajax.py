@@ -32,7 +32,7 @@ class IndexHandler(RequestHandler):
         #自动生成tokencookie并set到header中
         # 
         self.xsrf_token 
-        self.render('Index.html')
+        self.render('static/html/Index.html')
        
       
     
@@ -44,7 +44,7 @@ class StaticFileHandler(tornado.web.StaticFileHandler):
     def __init__(self,*args,**keywargs):
         # 执行父类初始化
         super(StaticFileHandler,self).__init__(*args,**keywargs)
-        self.xsrf_token
+        # self.xsrf_token
 
 
 

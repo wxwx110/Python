@@ -1,104 +1,12 @@
-[E 191006 10:20:47 http1connection:55] Uncaught exception
-    Traceback (most recent call last):
-      File "C:\Python27\lib\site-packages\tornado\http1connection.py", line 238, in _read_message
-        delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\routing.py", line 256, in finish
-        self.delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2195, in finish
-        self.execute()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2215, in execute
-        **self.handler_kwargs)
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 192, in __init__
-        self.clear()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 296, in clear
-        self.set_default_headers()
-      File "d:\StudyCore\python\w3cWeb\tornado\project\project01\handlers\BaseHandler.py", line 33, in set_default_headers
-        return super(self).set_default_headers()
-    TypeError: super() argument 1 must be type, not IndexHandler
-[E 191006 10:20:47 http1connection:55] Uncaught exception
-    Traceback (most recent call last):
-      File "C:\Python27\lib\site-packages\tornado\http1connection.py", line 238, in _read_message
-        delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\routing.py", line 256, in finish
-        self.delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2195, in finish
-        self.execute()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2215, in execute
-        **self.handler_kwargs)
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 192, in __init__
-        self.clear()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 296, in clear
-        self.set_default_headers()
-      File "d:\StudyCore\python\w3cWeb\tornado\project\project01\handlers\BaseHandler.py", line 33, in set_default_headers
-        return super(self).set_default_headers()
-    TypeError: super() argument 1 must be type, not IndexHandler
-[E 191006 10:20:47 http1connection:55] Uncaught exception
-    Traceback (most recent call last):
-      File "C:\Python27\lib\site-packages\tornado\http1connection.py", line 238, in _read_message
-        delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\routing.py", line 256, in finish
-        self.delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2195, in finish
-        self.execute()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2215, in execute
-        **self.handler_kwargs)
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 192, in __init__
-        self.clear()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 296, in clear
-        self.set_default_headers()
-      File "d:\StudyCore\python\w3cWeb\tornado\project\project01\handlers\BaseHandler.py", line 33, in set_default_headers
-        return super(self).set_default_headers()
-    TypeError: super() argument 1 must be type, not IndexHandler
-[E 191006 10:25:47 http1connection:55] Uncaught exception
-    Traceback (most recent call last):
-      File "C:\Python27\lib\site-packages\tornado\http1connection.py", line 238, in _read_message
-        delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\routing.py", line 256, in finish
-        self.delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2195, in finish
-        self.execute()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2215, in execute
-        **self.handler_kwargs)
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 192, in __init__
-        self.clear()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 296, in clear
-        self.set_default_headers()
-      File "d:\StudyCore\python\w3cWeb\tornado\project\project01\handlers\BaseHandler.py", line 33, in set_default_headers
-        return super(self).set_default_headers()
-    TypeError: super() argument 1 must be type, not IndexHandler
-[E 191006 10:25:47 http1connection:55] Uncaught exception
-    Traceback (most recent call last):
-      File "C:\Python27\lib\site-packages\tornado\http1connection.py", line 238, in _read_message
-        delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\routing.py", line 256, in finish
-        self.delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2195, in finish
-        self.execute()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2215, in execute
-        **self.handler_kwargs)
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 192, in __init__
-        self.clear()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 296, in clear
-        self.set_default_headers()
-      File "d:\StudyCore\python\w3cWeb\tornado\project\project01\handlers\BaseHandler.py", line 33, in set_default_headers
-        return super(self).set_default_headers()
-    TypeError: super() argument 1 must be type, not IndexHandler
-[E 191006 10:25:47 http1connection:55] Uncaught exception
-    Traceback (most recent call last):
-      File "C:\Python27\lib\site-packages\tornado\http1connection.py", line 238, in _read_message
-        delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\routing.py", line 256, in finish
-        self.delegate.finish()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2195, in finish
-        self.execute()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 2215, in execute
-        **self.handler_kwargs)
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 192, in __init__
-        self.clear()
-      File "C:\Python27\lib\site-packages\tornado\web.py", line 296, in clear
-        self.set_default_headers()
-      File "d:\StudyCore\python\w3cWeb\tornado\project\project01\handlers\BaseHandler.py", line 33, in set_default_headers
-        return super(self).set_default_headers()
-    TypeError: super() argument 1 must be type, not IndexHandler
-[I 191006 10:43:43 autoreload:199] d:\StudyCore\python\w3cWeb\tornado\project\project01\handlers\BaseHandler.py modified; restarting server
-[I 191006 10:43:45 autoreload:199] d:\StudyCore\python\w3cWeb\tornado\project\project01\handlers\BaseHandler.py modified; restarting server
+[D 191009 11:28:34 Passport:6] debug
+[I 191009 11:28:34 Passport:7] info
+[W 191009 11:28:34 Passport:8] warning
+[E 191009 11:28:34 Passport:9] error
+[I 191009 11:28:34 web:2162] 200 GET / (127.0.0.1) 1.00ms
+[I 191009 11:37:35 autoreload:199] d:/StudyCore/python/w3cWeb/tornado/project/project01/server.py modified; restarting server
+[I 191009 11:38:08 autoreload:199] d:/StudyCore/python/w3cWeb/tornado/project/project01/server.py modified; restarting server
+[D 191009 11:39:31 Passport:6] debug
+[I 191009 11:39:31 Passport:7] info
+[W 191009 11:39:31 Passport:8] warning
+[E 191009 11:39:31 Passport:9] error
+[I 191009 11:39:31 web:2162] 304 GET / (127.0.0.1) 1.00ms

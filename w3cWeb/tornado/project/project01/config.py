@@ -22,12 +22,8 @@ settings={
     #  base64.b64encode(uuid.uuid4().bytes+uuid.uuid4().bytes)
      ,"cookie_secret":"kFt1p488QMegs5vXh+Zm3ULrUK3rl0b8kKjdbSjvoqc="
      ,"xsrf_cookies":True
-     ,"debug":True
+     
 }
-
-# Application配置参数
-
-
 
 # 数据库配置参数
 mysql_options = dict(
@@ -44,8 +40,9 @@ redis_options = dict(
 )
 
 # 日志配置
+
 log_path = os.path.join(os.path.dirname(__file__), "logs/log")
-#日志级别 debug|info|warning|error
+#日志级别 debug|info|warning|error|none
 log_level = "debug"
 
 # 密码加密密钥

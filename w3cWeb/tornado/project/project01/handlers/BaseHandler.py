@@ -23,20 +23,24 @@ class BaseHandler(RequestHandler):
     
     
     def prepare(self):
-        return super().prepare()
+        # return super().prepare()
+        pass
 
     
     def write_error(self, status_code, **kwargs):
-        return super().write_error(status_code, **kwargs)
+        # return super().write_error(status_code, **kwargs)
+        pass
 
     def set_default_headers(self):
-        return super().set_default_headers()
+        # return super().set_default_headers()
+        pass
     
     def initialize(self):
         pass
     
     def on_finish(self):
-        return super().on_finish()
+        # return super().on_finish()
+        pass
 
 
 

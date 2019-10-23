@@ -12,6 +12,7 @@
 
 # here put the import lib
 from handlers import Passport
+from handlers import BaseHandler
 handlers= [
             (r'/',Passport.IndexHandler)
             
